@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# OS
+.DS_Store
+
+# Data (du kan välja att ignorera eller inte)
+data/
+backend/storage/*.csv
+
+# IDE
+.vscode/
+
+# PlatformIO
+.pio/
