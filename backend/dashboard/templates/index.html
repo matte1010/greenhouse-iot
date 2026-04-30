@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenhouse Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div>
+            <h1>🌱 Greenhouse Dashboard</h1>
+            <p class="subtitle">Real-time monitoring</p>
+        </div>
+        <div class="live"><span class="dot"></span>LIVE</div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="label">Soil Moisture</div>
+            <div class="metric" id="soil">--%</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Temperature</div>
+            <div class="metric" id="temp">--°C</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Humidity</div>
+            <div class="metric" id="humidity">--%</div>
+        </div>
+    </div>
+
+    <div id="status" class="status">Loading...</div>
+
+    <div class="card">
+        <h3>🌱 Soil Moisture</h3>
+        <div id="soilGraph" class="chart"></div>
+    </div>
+
+    <div class="card">
+        <h3>🌡️ Temperature</h3>
+        <div id="tempGraph" class="chart"></div>
+    </div>
+
+    <div class="card">
+        <h3>💧 Humidity</h3>
+        <div id="humidityGraph" class="chart"></div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
+</body>
+</html>
