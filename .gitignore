@@ -6,17 +6,29 @@ __pycache__/
 
 # Virtual environment
 venv/
-.env/
+.env
+*.env
+
+# Databases
+*.db
+*.db-shm
+*.db-wal
 
 # OS
 .DS_Store
 
-# Data (du kan välja att ignorera eller inte)
+# Logs / runtime data
+*.log
+simulator/*.log
+
+# Data
 data/
-backend/storage/*.csv
 
 # IDE
 .vscode/
 
-# PlatformIO
+# PlatformIO (ESP32)
 .pio/
+
+# CSV backups (old pipeline)
+*.csv

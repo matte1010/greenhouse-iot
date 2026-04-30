@@ -1,11 +1,12 @@
 from flask import Flask, jsonify, render_template
-from utils.data import get_latest_data, get_history_data
+from backend.common.db import init_db
+from backend.common.data import get_latest_data, get_history_data
 
 app = Flask(__name__)
 
-# -----------------------
-# ROUTES
-# -----------------------
+init_db()
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -21,8 +22,5 @@ def history():
     return jsonify(get_history_data())
 
 
-# -----------------------
-# RUN
-# -----------------------
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
