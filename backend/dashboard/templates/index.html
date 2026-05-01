@@ -18,40 +18,51 @@
             <h1>🌱 Greenhouse Dashboard</h1>
             <p class="subtitle">Real-time monitoring</p>
         </div>
-        <div class="live"><span class="dot"></span>LIVE</div>
+
+        <div class="header-right">
+            <div id="updated" class="updated">Updated: --</div>
+            <div id="liveBadge" class="live">
+                <span class="dot"></span>LIVE
+            </div>
+        </div>
     </div>
 
     <div class="grid">
-        <div class="card">
+
+        <div class="card metric-card">
             <div class="label">Soil Moisture</div>
             <div class="metric" id="soil">--%</div>
         </div>
 
-        <div class="card">
+        <div class="card metric-card">
             <div class="label">Temperature</div>
             <div class="metric" id="temp">--°C</div>
         </div>
 
-        <div class="card">
+        <div class="card metric-card">
             <div class="label">Humidity</div>
             <div class="metric" id="humidity">--%</div>
         </div>
+
     </div>
 
-    <div id="status" class="status">Loading...</div>
+    <div id="status" class="status loading">Loading...</div>
 
     <div class="card">
         <h3>🌱 Soil Moisture</h3>
+        <div class="chart-subtitle">Last 100 readings</div>
         <div id="soilGraph" class="chart"></div>
     </div>
 
     <div class="card">
         <h3>🌡️ Temperature</h3>
+        <div class="chart-subtitle">Last 100 readings</div>
         <div id="tempGraph" class="chart"></div>
     </div>
 
     <div class="card">
         <h3>💧 Humidity</h3>
+        <div class="chart-subtitle">Last 100 readings</div>
         <div id="humidityGraph" class="chart"></div>
     </div>
 
